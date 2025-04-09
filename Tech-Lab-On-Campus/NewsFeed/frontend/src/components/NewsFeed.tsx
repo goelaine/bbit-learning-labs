@@ -19,9 +19,15 @@ function NewsFeed({ articles }: NewsFeedProps ) {
         <div className="stories-container">
             <div className="stories-grid">
             {/* TODO: Remove the spans below and show a feed of news articles  */}
+                {/* <span className='instruction'>Part 3: Implement News Feed</span>
                 <span className='instruction'>Part 3: Implement News Feed</span>
-                <span className='instruction'>Part 3: Implement News Feed</span>
-                <span className='instruction'>Part 3: Implement News Feed</span>
+                <span className='instruction'>Part 3: Implement News Feed</span> */}
+                {articles.map((article, i) => (
+                    <NewsCard
+                        key={`${article}_${i}`}
+                        article={article}
+                    />))};
+
             </div>
         </div>
     );

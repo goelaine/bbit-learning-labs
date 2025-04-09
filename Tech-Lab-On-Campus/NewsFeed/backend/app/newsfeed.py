@@ -19,6 +19,7 @@ class Article:
 def get_all_news() -> list[Article]:
     """Get all news articles from the datastore."""
     # 1. Use Redis client to fetch all articles
+    arts = REDIS_CLIENT.get_entry("all_articles")
     # 2. Format the data into articles
     # 3. Return a list of the articles formatted 
     return []

@@ -21,11 +21,21 @@ function NewsCard({ article }: NewsCardProps) {
 
     // Hint: Some classes in `globals.css` could help with styling
 
+    let image = article.image_url
+    let title = article.title
+    let full_body = article.body
+
     return (
         <div className="news-card">
+            <div className="news-img-div">
+            <img src={image} alt={title} className="news-img"/>
+            </div>
             <div className="news-info">
                 {/* TODO: Remove the span below and implement a reusable NewsCard */}
-                <span className='instruction'>Part 2: Build Reusable News Card</span>
+                {/* <span className='instruction'>Part 2: Build Reusable News Card</span> */}
+                <h2 className="featured-story-title">{title}</h2>
+                <p className="featured-story-summary">{full_body}</p>
+
             </div>
         </div>
     );
